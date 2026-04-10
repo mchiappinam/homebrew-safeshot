@@ -17,8 +17,8 @@ fi
 echo "Latest release: v$VERSION"
 
 # Download DMGs and compute SHA256
-INTEL_URL="https://github.com/$REPO/releases/download/v$VERSION/SafeShot-macOS-Intel-x64.dmg"
-ARM_URL="https://github.com/$REPO/releases/download/v$VERSION/SafeShot-macOS-AppleSilicon-aarch64.dmg"
+INTEL_URL="https://github.com/$REPO/releases/download/v$VERSION/SafeShot-${VERSION}-macOS-Intel-x64.dmg"
+ARM_URL="https://github.com/$REPO/releases/download/v$VERSION/SafeShot-${VERSION}-macOS-AppleSilicon-aarch64.dmg"
 
 echo "Downloading Intel DMG..."
 INTEL_SHA=$(curl -sL "$INTEL_URL" | sha256sum | awk '{print $1}')
@@ -38,12 +38,12 @@ cask "safeshot" do
   version "$VERSION"
 
   on_intel do
-    url "https://github.com/$REPO/releases/download/v#{version}/SafeShot-macOS-Intel-x64.dmg"
+    url "https://github.com/$REPO/releases/download/v#{version}/SafeShot-#{version}-macOS-Intel-x64.dmg"
     sha256 "$INTEL_SHA"
   end
 
   on_arm do
-    url "https://github.com/$REPO/releases/download/v#{version}/SafeShot-macOS-AppleSilicon-aarch64.dmg"
+    url "https://github.com/$REPO/releases/download/v#{version}/SafeShot-#{version}-macOS-AppleSilicon-aarch64.dmg"
     sha256 "$ARM_SHA"
   end
 
