@@ -1,14 +1,14 @@
 cask "safeshot" do
-  version "1.4.0"
+  version "1.4.3"
 
   on_intel do
     url "https://github.com/mchiappinam/SafeShot/releases/download/v#{version}/SafeShot-#{version}-macOS-Intel-x64.dmg"
-    sha256 "b698a80e7fef2859c2a5b65aefad58f3aab645c388ba5515e53015e842dfeb06"
+    sha256 "357f757a76a08c8afce697210ac49310ba885a0062c5d4f88c630a6c20c81ed5"
   end
 
   on_arm do
     url "https://github.com/mchiappinam/SafeShot/releases/download/v#{version}/SafeShot-#{version}-macOS-AppleSilicon-aarch64.dmg"
-    sha256 "84379cb5089c2e7af554f56eb9f5086b5e9b0de31330defe2b671bbe39ddd0d5"
+    sha256 "301402f8db1e08de11943685a526bf7189252b337b8682628f6fddf19afd8606"
   end
 
   name "SafeShot"
